@@ -1,0 +1,14 @@
+﻿@model List<Recipes>
+
+
+@{
+}
+
+<h1>Recept</h1>
+
+@foreach (Recipes recipe in Model)
+{
+    <p>@recipe.Name <a href="/Recipe/Show/@recipe.Id">Visa recept</a></p>
+}
+
+<a href="/Recipe/Create">Skapa recept</a>

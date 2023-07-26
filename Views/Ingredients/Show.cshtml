@@ -1,0 +1,12 @@
+﻿@model Ingredients
+@{
+}
+
+
+<h1>@Model.Name</h1>
+
+<p><a href="/Ingredients/Edit/@Model.Id">Ändra ingredients</a></p>
+
+<form action="/Ingredients/Delete/@Model.Id" method="post">
+    <button>Radera ingrediens</button>
+</form> 

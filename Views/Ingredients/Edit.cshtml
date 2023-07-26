@@ -1,0 +1,11 @@
+﻿@model Ingredients
+@{
+}
+
+
+
+<form action="/Ingredients/Edit/@Model.Id" method="post">
+    <input type="text" name="Name" placeholder="Namnet på ingredientsen" value="@Model.Name" />
+    <button>Spara</button>
+
+</form>

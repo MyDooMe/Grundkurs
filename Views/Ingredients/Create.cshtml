@@ -1,0 +1,19 @@
+﻿@model List<Recipes>
+@{
+}
+
+
+<h1>Här lägger du till ingredienser</h1>
+<form action="/Ingredients/Create" method="post">
+    <select name="RecipeId">
+        @foreach (Recipes recipes in Model)
+        {
+            <option value="@recipes.Id">@recipes.Name</option>
+        }
+    </select>
+    <input type="type" name="Name" value="" placeholder="ingrediensens + mängden" />
+    <button>Spara</button>
+</form>
+
+
+<a asp-controller="Recipe" asp-action="Index"><button>Gå tillbaka till recepten</button></a>

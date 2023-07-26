@@ -1,0 +1,11 @@
+﻿@model List<Ingredients>
+
+<h1>Alla ingredientser</h1>
+
+    @foreach (Ingredients ingredient in Model)
+    {
+        <ul>
+        <li>@ingredient.Name <a href="/Ingredients/Show/@ingredient.Id">Visa ingrediens</a></li>
+        </ul>
+    }
+

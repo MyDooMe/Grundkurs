@@ -1,0 +1,17 @@
+﻿@model Recipes
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>@Model.Name</h1>
+<p>@Model.Description</p>
+<p><a href="/Recipe/Edit/@Model.Id"><button>Redigera beskrivning av recept</button></a></p>
+<p><a href="/Ingredients/Create/@Model.Id"><button>Lägg till ingredienser</button></a></p>
+<p><a href="/Ingredients/ShowAll/@Model.Id"><button>Visa alla ingredienser</button></a></p>
+<p><br />
+    <form action="/Recipe/Delete/@Model.Id" method="post">
+        <button>Radera recept</button>
+    </form>    
+</p>
